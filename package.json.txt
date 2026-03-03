@@ -1,0 +1,12 @@
+{
+  "name": "openclaw-deployment",
+  "version": "1.0.0",
+  "description": "OpenClaw permanent deployment",
+  "main": "index.js",
+  "scripts": {
+    "start": "openclaw gateway --port $PORT --verbose"
+  },
+  "dependencies": {
+    "openclaw": "^2026.3.1"
+  }
+}
