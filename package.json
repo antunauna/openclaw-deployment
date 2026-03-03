@@ -1,13 +1,10 @@
 {
   "name": "openclaw-deployment",
   "version": "1.0.0",
-  "description": "OpenClaw permanent deployment",
-  "main": "index.js",
-  "scripts": {
-  "start": "openclaw gateway --port 18789 --verbose --allow-unconfigured"
-}
   "dependencies": {
-    "openclaw": "^2026.3.1"
+    "openclaw": "latest"
+  },
+  "scripts": {
+    "start": "openclaw gateway --port 18789 --verbose --allow-unconfigured"
   }
 }
-
