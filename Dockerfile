@@ -16,5 +16,6 @@ COPY . .
 
 EXPOSE 18789
 
-CMD ["pnpm", "exec", "openclaw", "gateway", "--port", "$PORT", "--verbose", "--allow-unconfigured"]
+CMD ["npx", "pnpm", "exec", "openclaw", "gateway", "--port", "$PORT", "--verbose", "--allow-unconfigured"]
+
 
