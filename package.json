@@ -2,7 +2,8 @@
   "name": "openclaw-deployment",
   "version": "1.0.0",
   "dependencies": {
-    "openclaw": "latest"
+    "openclaw": "latest",
+    "@whiskeysockets/baileys": "6.1.0"
   },
   "scripts": {
     "start": "openclaw gateway --port 18789 --verbose --allow-unconfigured"
