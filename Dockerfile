@@ -25,5 +25,5 @@ COPY . .
 # 暴露服务端口
 EXPOSE 18789
 
-# 最终启动命令（写死端口，避免Invalid port错误）
-CMD ["pnpm", "exec", "openclaw", "gateway", "--port", "18789", "--verbose", "--allow-unconfigured"]
+# 最终启动命令：添加--max-old-space-size提升Node.js内存上限
+CMD ["node", "--max-old-space-size=8192", "./node_modules/.bin/openclaw", "gateway", "--port", "18789", "--verbose", "--allow-unconfigured"]
