@@ -1,5 +1,8 @@
 FROM node:22-alpine3.19
 
+# 安装 git，解决依赖安装时 spawn git ENOENT 错误
+RUN apk add --no-cache git
+
 WORKDIR /app
 
 # 复制依赖文件
