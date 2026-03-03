@@ -4,9 +4,10 @@
   "description": "OpenClaw permanent deployment",
   "main": "index.js",
   "scripts": {
-    "start": "openclaw gateway --port $PORT --verbose"
-  },
+  "start": "openclaw gateway --port 18789 --verbose --allow-unconfigured"
+}
   "dependencies": {
     "openclaw": "^2026.3.1"
   }
 }
+
