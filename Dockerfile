@@ -25,5 +25,6 @@ COPY . .
 # 暴露服务端口
 EXPOSE 18789
 
-# 最终启动命令：添加--max-old-space-size提升Node.js内存上限
-CMD ["node", "--max-old-space-size=8192", "./node_modules/.bin/openclaw", "gateway", "--port", "18789", "--verbose", "--allow-unconfigured"]
+# 关键修复：用bash执行openclaw，同时通过NODE_OPTIONS设置内存上限
+ENV NODE_OPTIONS="--max-old-space-size=8192"
+CMD ["bash", "-c", "./node_modules/.bin/openclaw gateway --port 18789 --verbose --allow-unconfigured"]
